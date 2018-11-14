@@ -1,12 +1,16 @@
 <template>
-    <li class="list-group-item">
+    <div>
+        <input type="text" :value="titulo" :placeholder="$attrs.placeholder">
+    </div>
+    <!-- <li class="list-group-item">
         <span>{{ filmeTituloConcatenado }} | {{ ano }}</span>
         <button class="btn btn-secondary float-right">Selecionar</button>
-    </li>
+    </li> -->
 </template>
 
 <script>
 export default {
+    inheritAttrs: false,
     props: {
         titulo: {
             type: String,
@@ -23,7 +27,7 @@ export default {
         }
     },
     created() {
-        console.log(typeof this.titulo)
+        console.log('Attrs: ', this.$attrs)
     }
 }
 </script>
