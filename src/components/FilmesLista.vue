@@ -11,9 +11,7 @@
         <FilmesListaIten
           v-for="filme in filmes"
           :key="filme.id"
-          class="tema-escuro"
-          placeholder="Título do filme"
-          v-bind="filme" />
+          :filme="filme" />
 
       </ul>
     </div>
