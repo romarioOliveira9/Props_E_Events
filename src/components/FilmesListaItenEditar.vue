@@ -53,7 +53,7 @@ export default {
                 )
             },
             get() {
-                return this.filme
+                return this.filmeLocal = this.filme
             }
         }
     },
